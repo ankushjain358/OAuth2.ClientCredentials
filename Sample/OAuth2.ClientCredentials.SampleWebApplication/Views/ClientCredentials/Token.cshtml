@@ -1,0 +1,25 @@
+﻿@using   OAuth2.ClientCredentials
+@{
+    ViewData["Title"] = "Token";
+
+    AuthResponse authResponse = ViewBag.AuthResponse;
+}
+
+<h1>Token</h1>
+
+<div class="container text-break">
+    <div class="row">
+        <div class="col-md-12">
+            <label><strong>TokenType</strong></label>
+            <label>@authResponse.TokenType</label>
+        </div>
+        <div class="col-md-12">
+            <label><strong>ExpiresIn</strong></label>
+            <label>@authResponse.ExpiresIn</label>
+        </div>
+        <div class="col-md-12">
+            <label><strong>AccessToken</strong></label>
+            <label>@authResponse.AccessToken</label>
+        </div>
+    </div>
+</div>
